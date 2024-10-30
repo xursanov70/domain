@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasko</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>Assalamu alaykum</h1>
+            <p>Saytimizga Xush kelibsiz</p>
+            <a href="https://instagram.com/jasko_70" class="btn">Get Started</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Xursanov.uz. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Water drips container -->
+    <script>
+        function createWaterDrop() {
+            const drop = document.createElement('div');
+            drop.classList.add('drop');
+            drop.style.left = Math.random() * window.innerWidth + 'px';
+            drop.style.width = Math.random() * 15 + 5 + 'px';
+            drop.style.height = drop.style.width;
+            drop.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(drop);
+
+            setTimeout(() => {
+                drop.remove();
+            }, 5000);
+        }
+    
+        setInterval(createWaterDrop, Math.random() * 200 + 100);
+    </script>
+</body>
+</html>
